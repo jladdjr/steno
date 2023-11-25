@@ -7,6 +7,9 @@ that provide the translations used by [Plover](http://www.openstenoproject.org/p
 a free, open source [stenography](https://www.artofchording.com/introduction/how-steno-works.html) engine.
 An attempt was made to preserve the history of these files when copying them from the Plover repository[^1][^2].
 
+This repository also contains dictionaries from Paul Fioravanti's [plover-q-and-a Plover plugin](https://github.com/paulfioravanti/plover-q-and-a/tree/main/examples/dictionaries).
+An attempt was made to preserve the history of these files when copying them into this repository.[^3].
+
 This repository also has commands to dynamically retrieve other helpful dictionaries
 as described in more detail in the following sections.
 
@@ -40,3 +43,7 @@ from the root of this repository:
 was used to preserve the Git history for Plover's dictionaries.
 (The literal command used was
 `python3 git-filter-repo --path-glob 'plover/assets/*.json'`)
+[^3]: [Git Filter Repo](https://github.com/newren/git-filter-repo#how-do-i-use-it)
+was used to preserve the Git history for the Plover Q&A Plugin's example dictionaries.
+(The literal command used was
+`python3 git-filter-repo --path examples/dictionaries`)
