@@ -21,12 +21,15 @@ Just will let you execute the recipes contained in [justfile](./justfile).
 
 ## Dictionary overview
 
+The following dictionaries are included in the [dictionaries](./dictionaries) folder:
+
 * commands.json - contains a subset of the default [modifier commands](https://plover.readthedocs.io/en/latest/translation_language.html#modifier-keys)
 and [Plover control commands](https://plover.readthedocs.io/en/latest/translation_language.html#control-commands)
 * main.json - the main Plover dictionary, a free and open source dictionary
 with [roots in the StenEd theory](https://www.artofchording.com/introduction/theories-and-dictionaries.html#plover-theory).
 Contains more than 147,000 translations.
 * user.json - a custom dictionary that can be used to [override](https://github.com/openstenoproject/plover/wiki/Built-in-tools#main-window) the default translations provided in `main.json`
+* several dictionaries from the [Plover Q&A Plugin](https://github.com/paulfioravanti/plover-q-and-a). See the Plugins [Instructions page](https://github.com/paulfioravanti/plover-q-and-a/blob/main/INSTRUCTIONS.md) for more information on what these dictionaries contain and how they can be used with the plugin.
 
 ## Dictionaries retrieved from other sources
 
