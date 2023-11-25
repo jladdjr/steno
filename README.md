@@ -10,6 +10,12 @@ An attempt was made to preserve the history of these files when copying them fro
 This repository also has commands to dynamically retrieve other helpful dictionaries
 as described in more detail in the following sections.
 
+## Prerequisites
+
+In order to download dictionaries retrieved from other sources,
+you will need to install [Just](https://github.com/casey/just#installation).
+Just will let you execute the recipes contained in [justfile](./justfile).
+
 ## Dictionary overview
 
 * commands.json - contains a subset of the default [modifier commands](https://plover.readthedocs.io/en/latest/translation_language.html#modifier-keys)
@@ -22,7 +28,7 @@ Contains more than 147,000 translations.
 ## Dictionaries retrieved from other sources
 
 The following dictionaries are automatically retrieved using the command
-`make retrieve_dicts`
+`just retrieve_dicts`
 from the root of this repository:
 
 * emily-symbols.py - for more information, see [emily-symbols](https://github.com/EPLHREU/emily-symbols)
