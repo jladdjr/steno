@@ -6,16 +6,16 @@ retrieve_dicts:
 
 install_plugins:
         # https://github.com/jladdjr/plover-ninja
-        $(plover_pip) install plover-ninja
+        {{plover_pip}} install plover-ninja
 
         # https://github.com/paulfioravanti/plover-q-and-a
-        $(plover_pip) install plover_q_and_a
+        {{plover_pip}} install plover_q_and_a
 
         # https://github.com/paulfioravanti/plover-local-env-var
-        $(plover_pip) install plover-local-env-var
+        {{plover_pip}} install plover-local-env-var
 
         # https://github.com/openstenoproject/plover_python_dictionary
-        $(plover_pip) install plover-python-dictionary
+        {{plover_pip}} install plover-python-dictionary
 
         # https://github.com/antistic/plover_markdown_dictionary
-        $(plover_pip) install plover_markdown_dictionary
+        {{plover_pip}} install plover_markdown_dictionary
