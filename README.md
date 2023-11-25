@@ -40,6 +40,9 @@ from the root of this repository:
 * emily-symbols.py - for more information, see [emily-symbols](https://github.com/EPLHREU/emily-symbols)
 * emily-modifiers.py - for more information, see [emily-modifiers](https://github.com/EPLHREU/emily-modifiers)
 
+The definition of the `retrieve_dicts` Just recipe (and all other recipes) can be found
+in the [justfile](./justfile).
+
 [^1]: `commands.json`, `main.json`, and `user.json` were copied from
 [openstenoproject/plover](https://github.com/openstenoproject/plover/tree/main/plover/assets)
 [^2]: [Git Filter Repo](https://github.com/newren/git-filter-repo#how-do-i-use-it)
