@@ -5,6 +5,9 @@ retrieve_dicts:
 	wget --quiet https://raw.githubusercontent.com/EPLHREU/emily-symbols/main/emily-symbols.py -O dictionaries/emily-symbols.py
 
 install_plugins:
+        # https://github.com/psethwick/plover_console_ui
+        {{plover_pip}} install plover-console-ui
+
         # https://github.com/jladdjr/plover-ninja
         {{plover_pip}} install plover-ninja
 
