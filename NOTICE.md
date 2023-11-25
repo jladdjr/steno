@@ -12,6 +12,7 @@ and are licensed under the GNU General Public License v3.0.
 
 ---
 
+```text
                     GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 
@@ -292,3 +293,4 @@ PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGES.
 
                      END OF TERMS AND CONDITIONS
+```
