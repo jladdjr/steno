@@ -1,11 +1,13 @@
-The copyright for dictionaries retrieved from https://github.com/openstenoproject/plover/ (on November 11, 2023) is held by the Open Steno Project.
+The copyright for Plover dictionaries is held by the Open Steno Project.
 These dictionaries are licensed under the GNU General Public License v2.0.
 A copy of this license is included below.
+The Plover dictionaries were retrieved on November 24, 2023.
 
 The copyright for Emily's Modifier Dictionary and Emily's Symbol Dictionary is held by Emily Easteal.
 
 The copyright for the Plover Q&A plugin is help by Paul Fioravanti.
 This plugin is licensed under the GNU General Public License v3.0.
+Sample dictionaries from this repo were retrieved on November 25, 2023.
 
 The copyright for modifications to the original Plover dictionaries belongs to Jim Ladd
 and are licensed under the GNU General Public License v3.0.
