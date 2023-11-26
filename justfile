@@ -1,4 +1,10 @@
 plover_pip := "~/.local/bin/pip3.9"
+plover_config_remote := "~/.local/share/plover/plover.cfg"
+plover_config_local := "plover_configs/rpi_plover.cfg"
+
+
+default:
+        just -l
 
 retrieve_dicts:
 	wget --quiet https://raw.githubusercontent.com/EPLHREU/emily-modifiers/master/emily-modifiers.py -O dictionaries/emily-modifiers.py
@@ -22,3 +28,8 @@ install_plugins:
 
         # https://github.com/antistic/plover_markdown_dictionary
         {{plover_pip}} install plover_markdown_dictionary
+
+install_plover_config:
+        cp {{plover_config_local}} {{plover_config_remote}}
+
+install: retrieve_dicts install_plugins install_plover_config
