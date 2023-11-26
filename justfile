@@ -29,6 +29,9 @@ install_plugins:
         # https://github.com/antistic/plover_markdown_dictionary
         {{plover_pip}} install plover_markdown_dictionary
 
+        # https://github.com/tckmn/plover_clippy
+        {{plover_pip}} install plover_clippy
+
 install_plover_config:
         cp {{plover_config_local}} {{plover_config_remote}}
 
