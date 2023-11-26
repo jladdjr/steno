@@ -7,7 +7,10 @@ The copyright for Emily's Modifier Dictionary and Emily's Symbol Dictionary is h
 
 The copyright for the Plover Q&A plugin is help by Paul Fioravanti.
 This plugin is licensed under the GNU General Public License v3.0.
-Sample dictionaries from this repo were retrieved on November 25, 2023.
+
+The copyright for Paul Fioravanti's steno-dictionaries repository is held by Paul Fioravanti.
+The contents of the steno-dictionaries repository are licensed under the GNU General Public License v3.0.
+The q-and-a.md dictionary was retrieved from this repository on November 25, 2023.
 
 The copyright for modifications to the original Plover dictionaries belongs to Jim Ladd
 and are licensed under the GNU General Public License v3.0.

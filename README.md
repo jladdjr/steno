@@ -7,8 +7,10 @@ that provide the translations used by [Plover](http://www.openstenoproject.org/p
 a free, open source [stenography](https://www.artofchording.com/introduction/how-steno-works.html) engine.
 An attempt was made to preserve the history of these files when copying them from the Plover repository[^1][^2].
 
-This repository also contains dictionaries from Paul Fioravanti's [plover-q-and-a Plover plugin](https://github.com/paulfioravanti/plover-q-and-a/tree/main/examples/dictionaries).
-An attempt was made to preserve the history of these files when copying them into this repository.[^3].
+This repository also contains a dictionary from Paul Fioravanti's
+[steno-dictionaries repo](https://github.com/paulfioravanti/steno-dictionaries/blob/main/dictionaries/q-and-a.md)
+for transcribing a court Q & A session.
+An attempt was made to preserve the history of this file when copying it into this repository.[^3].
 
 This repository also has commands to dynamically retrieve other helpful dictionaries
 as described in more detail in the following sections.
@@ -29,7 +31,8 @@ and [Plover control commands](https://plover.readthedocs.io/en/latest/translatio
 with [roots in the StenEd theory](https://www.artofchording.com/introduction/theories-and-dictionaries.html#plover-theory).
 Contains more than 147,000 translations.
 * user.json - a custom dictionary that can be used to [override](https://github.com/openstenoproject/plover/wiki/Built-in-tools#main-window) the default translations provided in `main.json`
-* several dictionaries from the [Plover Q&A Plugin](https://github.com/paulfioravanti/plover-q-and-a). See the Plugins [Instructions page](https://github.com/paulfioravanti/plover-q-and-a/blob/main/INSTRUCTIONS.md) for more information on what these dictionaries contain and how they can be used with the plugin.
+* a dictionary from Paul Fioravanti's [steno-dictionaries repo](https://github.com/paulfioravanti/steno-dictionaries/blob/main/dictionaries/q-and-a.md) for transcribing a court Q & A session.
+See the Plover Q&A Plugin's [Instructions page](https://github.com/paulfioravanti/plover-q-and-a/blob/main/INSTRUCTIONS.md) for more information on what this dictionary contains and how it can be used with the Plover Q&A plugin.
 
 ## Dictionaries retrieved from other sources
 
@@ -50,6 +53,6 @@ was used to preserve the Git history for Plover's dictionaries.
 (The literal command used was
 `python3 git-filter-repo --path-glob 'plover/assets/*.json'`)
 [^3]: [Git Filter Repo](https://github.com/newren/git-filter-repo#how-do-i-use-it)
-was used to preserve the Git history for the Plover Q&A Plugin's example dictionaries.
+was used to preserve the Git history for the q-and-a.md dictionary.
 (The literal command used was
-`python3 git-filter-repo --path examples/dictionaries`)
+`python3 git-filter-repo --path dictionaries/q-and-a.md`)
