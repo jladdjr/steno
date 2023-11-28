@@ -9,3 +9,10 @@ Initial release
   and installing Plover plugins
 - Create RESOURCES.md with links to helpful resources for working with Plover,
   learning Plover theory, and building fluency with stenography
+
+1.1.0
+=====
+
+Minor Updates
+- Map `#` so that it repeats the previous stroke
+- Map `#*` so that it toggles `*` for the previous stroke
