@@ -10,8 +10,8 @@ Initial release
 - Create RESOURCES.md with links to helpful resources for working with Plover,
   learning Plover theory, and building fluency with stenography
 
-1.1.0
-=====
+1.1.0 (pre)
+===========
 
 Minor Updates
 - Map `#` so that it repeats the previous stroke
