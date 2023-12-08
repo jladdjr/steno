@@ -2,6 +2,9 @@ plover_pip := "~/.local/bin/pip3.9"
 plover_config_remote := "~/.local/share/plover/plover.cfg"
 plover_config_local := "plover_configs/rpi_plover.cfg"
 
+# Mac
+# plover_pip := "~/bin/Plover.app/Contents/Frameworks/Python.framework/Versions/3.9/bin
+# ./python -m pip install git+https://github.com/Josiah-tan/plover_clippy_2
 
 default:
         just -l
