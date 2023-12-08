@@ -13,6 +13,7 @@ Initial release
 1.1.0 (pre)
 ===========
 
-Minor Updates
+Minor Updates:
 - Map `#` so that it repeats the previous stroke
 - Map `#*` so that it toggles `*` for the previous stroke
+- Install Clippy 2 instead of Clippy
