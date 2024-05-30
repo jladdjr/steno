@@ -6,6 +6,8 @@ plover_pip := "/usr/bin/pip3"
 plover_pip_options := "--break-system-packages"
 plover_config_remote := "~/.config/plover/plover.cfg"
 plover_config_local := "plover_configs/debian_plover.cfg"
+clippy_log := "~/.config/plover/clippy_2.org"
+shell_rc := "~/.bashrc"
 
 # Raspberry Pi
 # plover_pip := "~/.local/bin/pip3.9"
@@ -50,4 +52,7 @@ install_plugins:
 install_plover_config:
         cp {{plover_config_local}} {{plover_config_remote}}
 
-install: retrieve_dicts install_plugins install_plover_config
+install_clippy_watch_alias:
+        echo 'alias clippy="tail -f {{clippy_log}}"' >> {{shell_rc}}
+
+install: retrieve_dicts install_plugins install_plover_config install_clippy_watch_alias
