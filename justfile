@@ -49,6 +49,9 @@ install_plugins:
         # https://github.com/tckmn/plover_clippy
         {{plover_pip}} install {{plover_pip_options}} git+https://github.com/Josiah-tan/plover_clippy_2
 
+        # https://github.com/openstenoproject/plover_python_dictionary
+        {{plover_pip}} install {{plover_pip_options}} git+https://github.com/openstenoproject/plover_python_dictionary
+
 install_plover_config:
         cp {{plover_config_local}} {{plover_config_remote}}
 
