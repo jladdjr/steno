@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# workaround for issue where plover seems to attach
+# to configuration of "first" keyboard on startup
+# https://github.com/openstenoproject/plover/issues/788#issuecomment-316005347
+
+# Setting the keyboard layout to us appeared to work
+# at one point, but no longer seems to work
+#swaymsg input type:keyboard xkb_layout "us"
+
+# Instead, it seems that sway's config needs to be reloaded
+swaymsg reload
+
+# ~/.sway/config entry that can be used for TinyMod
+#
+# input 9114:32782:Adafruit_ItsyBitsy_32u4_5V_16MHz {
+#    xkb_layout "us"
+#    xkb_variant '""'
+# }
+
+# While the TinyMod should use the US keyboard layout
+# should set other keyboards (including any virtual
+# keyboards used) to Dvorak
+
+# #input type:keyboard {
+# input 1:1:AT_Translated_Set_2_keyboard {
+#    xkb_layout "us"
+#    xkb_variant "dvorak"
+#
+#    repeat_delay 300
+#    repeat_rate 35
+# }
+#
+# input 4012:2782:keyd_virtual_keyboard {
+#    xkb_layout "us"
+#    xkb_variant "dvorak"
+#
+#    repeat_delay 300
+#    repeat_rate 35
+# }
+
+~/venvs/plover/bin/plover --gui console
