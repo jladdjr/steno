@@ -1,9 +1,9 @@
 # Debian
-plover_pip := "/usr/bin/pip3"
-# WARNING: INSTALLS PLOVER PLUGINS TO SYSTEM SITE-PACKAGES
-# Appears necessary since plover dpkg installs
-# plover directly in system site-packages as well
-plover_pip_options := "--break-system-packages"
+# - Plover installed into a virtual env
+#   (at ~/venvs/plover)
+#   using the latest Python wheel release
+plover_pip := "/home/jim/venvs/plover/bin/pip3"
+plover_pip_options := ""
 plover_config_remote := "~/.config/plover/plover.cfg"
 plover_config_local := "plover_configs/debian_plover.cfg"
 clippy_log := "~/.config/plover/clippy_2.org"
