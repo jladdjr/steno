@@ -27,10 +27,10 @@ The following dictionaries are included in the [dictionaries](./dictionaries) fo
 
 * commands.json - contains a subset of the default [modifier commands](https://plover.readthedocs.io/en/latest/translation_language.html#modifier-keys)
 and [Plover control commands](https://plover.readthedocs.io/en/latest/translation_language.html#control-commands)
-* main.json - the main Plover dictionary, a free and open source dictionary
+* typey-type-full.json - [Typey Type](https://didoesdigital.com/typey-type/dictionaries/typey-type/typey-type-full/)'s dictiory. Builds on Plover's dictionary with misstrokes removed from the top 10,000 words.
 with [roots in the StenEd theory](https://www.artofchording.com/introduction/theories-and-dictionaries.html#plover-theory).
 Contains more than 147,000 translations.
-* user.json - a custom dictionary that can be used to [override](https://github.com/openstenoproject/plover/wiki/Built-in-tools#main-window) the default translations provided in `main.json`
+* user.json - a custom dictionary that can be used to [override](https://github.com/openstenoproject/plover/wiki/Built-in-tools#main-window) the default translations provided in `typey-type-full.json`
 * a dictionary from Paul Fioravanti's [steno-dictionaries repo](https://github.com/paulfioravanti/steno-dictionaries/blob/main/dictionaries/q-and-a.md) for transcribing a court Q & A session.
 See the Plover Q&A Plugin's [Instructions page](https://github.com/paulfioravanti/plover-q-and-a/blob/main/INSTRUCTIONS.md) for more information on what this dictionary contains and how it can be used with the Plover Q&A plugin.
 
@@ -46,7 +46,7 @@ from the root of this repository:
 The definition of the `retrieve_dicts` Just recipe (and all other recipes) can be found
 in the [justfile](./justfile).
 
-[^1]: `commands.json`, `main.json`, and `user.json` were copied from
+[^1]: `commands.json` and `user.json` were copied from
 [openstenoproject/plover](https://github.com/openstenoproject/plover/tree/main/plover/assets)
 [^2]: [Git Filter Repo](https://github.com/newren/git-filter-repo#how-do-i-use-it)
 was used to preserve the Git history for Plover's dictionaries.
