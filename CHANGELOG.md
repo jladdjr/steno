@@ -1,7 +1,8 @@
 1.1.0
 ===========
 Major Updates:
-- Adopt [Typey Type](https://didoesdigital.com/typey-type/dictionaries/typey-type/typey-type-full/)'s dictionary instead of Plover's dictionary
+- Adopt [Typey Type](https://didoesdigital.com/typey-type/dictionaries/typey-type/typey-type-full/)'s dictionary instead of Plover's dictionary ([source](https://github.com/didoesdigital/typey-type-data/blob/13cdba2f3fceec447e6cea28164b1eb642a2c687/dictionaries/typey-type/typey-type-full.json))
+
 Minor Updates:
 - Map `#` so that it repeats the previous stroke
 - Map `#*` so that it toggles `*` for the previous stroke
