@@ -2,10 +2,14 @@
 
 ## Overview
 
-This repository contains [dictionaries](https://plover.readthedocs.io/en/latest/dict_formats.html)
-that provide the translations used by [Plover](http://www.openstenoproject.org/plover/),
-a free, open source [stenography](https://www.artofchording.com/introduction/how-steno-works.html) engine.
-An attempt was made to preserve the history of these files when copying them from the Plover repository[^1][^2].
+This repository contains stenography [dictionaries](https://plover.readthedocs.io/en/latest/dict_formats.html).
+Each dictionary provides translations that make up a stenography [theory](https://www.artofchording.com/introduction/theories-and-dictionaries.html).
+These translations are read by [Plover](http://www.openstenoproject.org/plover/), a free, open source stenography engine.
+Plover uses these translations to convert steno strokes into written words.
+
+The main dictionary used by this repo is Diana MacDonald's [Typey Type](https://didoesdigital.com/typey-type/support#typey-type-dictionary) dictionary.
+This dictionary is based on Plover's own dictionary.
+Plover's theory was originally based on [StenEd](https://www.stenedsource.com/).
 
 This repository also contains a dictionary from Paul Fioravanti's
 [steno-dictionaries repo](https://github.com/paulfioravanti/steno-dictionaries/blob/main/dictionaries/q-and-a.md)

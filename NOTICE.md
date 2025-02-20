@@ -3,6 +3,11 @@ These dictionaries are licensed under the GNU General Public License v2.0.
 A copy of this license is included below.
 The Plover dictionaries were retrieved on November 24, 2023.
 
+The copyright for Typey Type dictionaries is held by Diana MacDonald.
+These dictionaries are licensed under the GNU General Public License v2.0.
+A copy of this license is included below.
+The typey-type-full dictionary was retrieved on February 2, 2025.
+
 The copyright for Emily's Modifier Dictionary and Emily's Symbol Dictionary is held by Emily Easteal.
 
 The copyright for the Plover Q&A plugin is help by Paul Fioravanti.
