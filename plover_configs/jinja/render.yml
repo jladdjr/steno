@@ -6,13 +6,13 @@
     stroke_logging_enabled: true
     translation_logging_enabled: true
     dictionaries:
-      - "~/git/steno-dictionaries/dictionaries/fingerspelling.json"
-      - "~/git/steno-dictionaries/dictionaries/q-and-a.md"
-      - "~/git/steno-dictionaries/dictionaries/emily-modifiers.py"
-      - "~/git/steno-dictionaries/dictionaries/emily-symbols.py"
-      - "~/git/steno-dictionaries/dictionaries/user.json"
-      - "~/git/steno-dictionaries/dictionaries/commands.json"
-      - "~/git/steno-dictionaries/dictionaries/typey-type-full.json"
+      - "~/steno/dicts/fingerspelling.json"
+      - "~/steno/dicts/q-and-a.md"
+      - "~/steno/dicts/emily-modifiers.py"
+      - "~/steno/dicts/emily-symbols.py"
+      - "~/steno/dicts/user.json"
+      - "~/steno/dicts/commands.json"
+      - "~/steno/dicts/typey-type-full.json"
 
   tasks:
   - name: Templatize Plover config
