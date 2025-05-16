@@ -7,6 +7,7 @@ The copyright for Typey Type dictionaries is held by Diana MacDonald.
 These dictionaries are licensed under the GNU General Public License v2.0.
 A copy of this license is included below.
 The typey-type-full dictionary was retrieved on February 2, 2025.
+The fingerspelling dictionary was retrieved on May, 16, 2025.
 
 The copyright for Emily's Modifier Dictionary and Emily's Symbol Dictionary is held by Emily Easteal.
 

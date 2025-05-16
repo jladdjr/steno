@@ -31,7 +31,8 @@ The following dictionaries are included in the [dictionaries](./dictionaries) fo
 
 * commands.json - contains a subset of the default [modifier commands](https://plover.readthedocs.io/en/latest/translation_language.html#modifier-keys)
 and [Plover control commands](https://plover.readthedocs.io/en/latest/translation_language.html#control-commands)
-* typey-type-full.json - [Typey Type](https://didoesdigital.com/typey-type/dictionaries/typey-type/typey-type-full/)'s dictiory. Builds on Plover's dictionary with misstrokes removed from the top 10,000 words.
+* typey-type-full.json - [Typey Type](https://didoesdigital.com/typey-type/dictionaries/typey-type/typey-type-full/)'s dictionary. Builds on Plover's dictionary with misstrokes removed from the top 10,000 words.
+* fingerspelling.json - contains fingerspelling translations not included in typey-type-full.json
 with [roots in the StenEd theory](https://www.artofchording.com/introduction/theories-and-dictionaries.html#plover-theory).
 Contains more than 147,000 translations.
 * user.json - a custom dictionary that can be used to [override](https://github.com/openstenoproject/plover/wiki/Built-in-tools#main-window) the default translations provided in `typey-type-full.json`
