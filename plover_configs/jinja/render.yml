@@ -1,0 +1,22 @@
+- hosts: all
+  vars:
+    gemini_enabled: true
+    plugins_enabled: false
+    txbolt_enabled: false
+    stroke_logging_enabled: true
+    translation_logging_enabled: true
+    dictionaries:
+      - "~/git/steno-dictionaries/dictionaries/fingerspelling.json"
+      - "~/git/steno-dictionaries/dictionaries/q-and-a.md"
+      - "~/git/steno-dictionaries/dictionaries/emily-modifiers.py"
+      - "~/git/steno-dictionaries/dictionaries/emily-symbols.py"
+      - "~/git/steno-dictionaries/dictionaries/user.json"
+      - "~/git/steno-dictionaries/dictionaries/commands.json"
+      - "~/git/steno-dictionaries/dictionaries/typey-type-full.json"
+
+  tasks:
+  - name: Templatize Plover config
+    template:
+      src: "templates/plover.cfg.j2"
+      dest: "templates/plover.cfg"
+      mode: 0755

@@ -1,0 +1,49 @@
+[Machine Configuration]
+{% if gemini_enabled %}
+machine_type = Gemini PR
+{% else %}
+machine_type = TX Bolt
+{% endif %}
+auto_start = True
+
+[Output Configuration]
+undo_levels = 100
+time_between_key_presses = 3
+
+[Translation Frame]
+opacity = 100
+
+{% if gemini_enabled %}[Gemini PR]
+baudrate = 9600
+bytesize = 8
+parity = N
+port = /dev/ttyACM0
+stopbits = 1
+timeout = 2.0
+{% endif %}
+{% if txbolt_enabled %}[TX Bolt]
+baudrate = 9600
+bytesize = 8
+parity = N
+port = /dev/ttyACM0
+stopbits = 1
+timeout = 2.0
+{% endif %}
+
+[System: English Stenotype]
+keymap[keyboard] = [["#", ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "="]], ["*", ["t", "y", "g", "h"]], ["-B", ["k"]], ["-D", ["["]], ["-E", ["n"]], ["-F", ["u"]], ["-G", ["l"]], ["-L", ["o"]], ["-P", ["i"]], ["-R", ["j"]], ["-S", [";"]], ["-T", ["p"]], ["-U", ["m"]], ["-Z", ["'"]], ["A-", ["c"]], ["H-", ["r"]], ["K-", ["s"]], ["O-", ["v"]], ["P-", ["e"]], ["R-", ["f"]], ["S-", ["q", "a"]], ["T-", ["w"]], ["W-", ["d"]], ["arpeggiate", ["space"]], ["no-op", ["\\", "]", "z", "x", "b", ",", ".", "/"]]]
+dictionaries = [{% for dict in dictionaries %}{"enabled": true, "path": "{{ dict }}"}{% if not loop.last %},{% endif %}{% endfor %}]
+
+[Logging Configuration]
+log_file = strokes.log
+{% if stroke_logging_enabled %}
+enable_stroke_logging = True
+{% endif %}
+{% if translation_logging_enabled %}
+enable_translation_logging = True
+{% endif %}
+
+{% if plugins_enabled %}
+[Plugins]
+enabled_extensions = ["ninja_extension", "plover_clippy_2"]
+{% endif %}
