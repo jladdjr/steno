@@ -122,14 +122,14 @@
         mode: '0755'
       become: true
 
-    - name: Add bash function m to swaymsg with 'dvorak' variant
+    - name: Add bash function m to reload sway config
       lineinfile:
         path: "{{ shell_rc }}"
         create: yes
         insertafter: EOF
         line: |
           m() {
-            swaymsg input type:keyboard xkb_variant '"dvorak"'
+            swaymsg reload
           }
 
     - name: Add bash function a to swaymsg with 'us' variant
@@ -139,5 +139,5 @@
         insertafter: EOF
         line: |
           a() {
-            swaymsg input type:keyboard xkb_variant '"us"'
+            swaymsg input type:keyboard xkb_layout "us"
           }
