@@ -1,0 +1,143 @@
+- hosts: all
+  vars:
+    recreate_venv: false
+
+    gemini_enabled: true
+    txbolt_enabled: false
+
+    stroke_logging_enabled: true
+    translation_logging_enabled: true
+
+    dictionaries:
+      - "~/steno/dicts/q-and-a.md"
+      - "~/steno/dicts/emily-modifiers.py"
+      - "~/steno/dicts/emily-symbols.py"
+      - "~/steno/dicts/user.json"
+      - "~/steno/dicts/commands.json"
+      - "~/steno/dicts/typey-type-full.json"
+
+    plugins_enabled: true
+    plugins:
+      # https://github.com/psethwick/plover_console_ui
+      - "plover-console-ui"
+
+      # https://github.com/jladdjr/plover-ninja
+      - "plover-ninja"
+
+      # https://github.com/paulfioravanti/plover-q-and-a
+      - "plover_q_and_a"
+
+      # https://github.com/paulfioravanti/plover-local-env-var
+      - "plover-local-env-var"
+
+      # https://github.com/openstenoproject/plover_python_dictionary
+      - "plover-python-dictionary"
+
+      # https://github.com/antistic/plover_markdown_dictionary
+      - "plover_markdown_dictionary"
+
+      # https://github.com/tckmn/plover_clippy
+      - "git+https://github.com/Josiah-tan/plover_clippy_2"
+
+      # https://github.com/openstenoproject/plover_python_dictionary
+      - "git+https://github.com/openstenoproject/plover_python_dictionary"
+
+  tasks:
+    - name: Set paths
+      set_fact:
+        plover_venv: "{{ ansible_env.HOME }}/venvs/plver"
+        plover_config: "{{ ansible_env.HOME }}/.config/plover/plover.cfg"
+
+        clippy_log: "{{ ansible_env.HOME }}/.config/plover/clippy_2.org"
+        shell_rc: "{{ ansible_env.HOME }}/.bashrc"
+
+    - name: Set pip path
+      set_fact:
+        plover_pip: "{{ plover_venv }}/bin/pip3"
+
+    - name: Remove plover virtualenv if requested
+      file:
+        path: "{{ plover_venv }}"
+        state: absent
+      when: recreate_venv | bool
+
+    - name: Ensure ~/venvs directory exists
+      file:
+        path: "{{ ansible_env.HOME }}/venvs"
+        state: directory
+        mode: '0755'
+
+    - name: Ensure python3-venv is installed
+      apt:
+        name: python3-venv
+        state: present
+      become: true
+
+    - name: Create plover venv using system python3
+      command: python3 -m venv "{{ plover_venv }}"
+
+    - name: Install pip plugins into plover venv
+      pip:
+        name: "{{ item }}"
+        virtualenv: "{{ plover_venv }}"
+      loop: "{{ plugins }}"
+
+    - name: Download emily-modifiers.py
+      get_url:
+        url: https://raw.githubusercontent.com/EPLHREU/emily-modifiers/master/emily-modifiers.py
+        dest: dicts/emily-modifiers.py
+        mode: '0644'
+        force: no
+
+    - name: Download emily-symbols.py
+      get_url:
+        url: https://raw.githubusercontent.com/EPLHREU/emily-symbols/main/emily-symbols.py
+        dest: dicts/emily-symbols.py
+        mode: '0644'
+        force: no
+
+    - name: Templatize Plover config
+      template:
+        src: "templates/plover.cfg.j2"
+        dest: "{{ plover_config }}"
+        mode: 0755
+
+    - name: Add clippy alias to shell config
+      lineinfile:
+        path: "{{ shell_rc }}"
+        line: 'alias clippy="tail -f {{ clippy_log }}"'
+        create: no
+        insertafter: EOF
+
+    - name: Create jplover executable script (runs plover inside screen)
+      copy:
+        dest: /usr/local/bin/jplover
+        content: |
+          #!/bin/bash
+          SESSION_NAME="plover"
+          VENV_PLOVER="{{ ansible_env.HOME }}/venvs/plover/bin/plover"
+          # Start or attach to screen session named 'plover'
+          screen -S "$SESSION_NAME" -X quit 2>/dev/null || true  # Optional: kill existing session (if you want fresh start)
+          screen -dmS "$SESSION_NAME" "$VENV_PLOVER" --gui console
+        mode: '0755'
+        become: true
+
+    - name: Add bash function m to swaymsg with 'dvorak' variant
+      lineinfile:
+        path: "{{ shell_rc }}"
+        create: yes
+        insertafter: EOF
+        line: |
+          m() {
+            swaymsg input type:keyboard xkb_variant '"dvorak"'
+          }
+
+    - name: Add bash function a to swaymsg with 'us' variant
+      lineinfile:
+        path: "{{ shell_rc }}"
+        create: yes
+        insertafter: EOF
+        line: |
+          a() {
+            swaymsg input type:keyboard xkb_variant '"us"'
+          }
