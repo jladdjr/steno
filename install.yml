@@ -120,7 +120,7 @@
           screen -S "$SESSION_NAME" -X quit 2>/dev/null || true  # Optional: kill existing session (if you want fresh start)
           screen -dmS "$SESSION_NAME" "$VENV_PLOVER" --gui console
         mode: '0755'
-        become: true
+      become: true
 
     - name: Add bash function m to swaymsg with 'dvorak' variant
       lineinfile:
