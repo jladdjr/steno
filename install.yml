@@ -18,6 +18,9 @@
 
     plugins_enabled: true
     plugins:
+      # TODO: install plover-uinput (and apt install requirements, udev rules, etc)
+      # This helps with capitalization!
+
       # https://github.com/psethwick/plover_console_ui
       - "plover-console-ui"
 
